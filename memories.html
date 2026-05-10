@@ -1,0 +1,222 @@
+<!-- memories.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Our Beautiful Memories ❤️</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- GOOGLE FONTS -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <audio id="bgMusic" loop>
+        <source src="audio/ThousandYears.mpeg" type="audio/mpeg">
+      </audio>
+
+  <!-- FLOATING HEARTS -->
+
+  <div class="hearts">
+    <span>❤️</span>
+    <span>💖</span>
+    <span>💕</span>
+    <span>💗</span>
+    <span>💞</span>
+  </div>
+
+  <!-- MEMORIES PAGE -->
+
+  <section class="timeline-section">
+
+    <!-- INTRO -->
+
+    <div class="memory-intro">
+
+      <h1>Our Beautiful Memories ❤️</h1>
+
+      <p>
+        Some memories never fade,
+        no matter how much time passes.
+      </p>
+
+    </div>
+
+    <!-- TIMELINE -->
+
+    <div class="timeline">
+
+      <!-- MEMORY 1 -->
+
+      <div class="timeline-item left">
+
+        <div class="timeline-content fade-in">
+
+          <img src="images/memory1.jpeg" alt="">
+
+          <h3>Childhood Days 🌸</h3>
+
+          <p>
+            Thank you for holding my hand
+            through every small step in life.
+          </p>
+
+        </div>
+
+      </div>
+
+      <!-- MEMORY 2 -->
+
+      <div class="timeline-item right">
+
+        <div class="timeline-content fade-in">
+
+          <img src="images/memory2.jpeg" alt="">
+
+          <h3>Always Supporting Me ❤️</h3>
+
+          <p>
+            Even when we disagreed,
+            your love never disappeared.
+          </p>
+
+        </div>
+
+      </div>
+
+      <!-- MEMORY 3 -->
+
+      <div class="timeline-item left">
+
+        <div class="timeline-content fade-in">
+
+          <img src="images/memory3.jpeg" alt="">
+
+          <h3>Laughing Together ✨</h3>
+
+          <p>
+            Some of my happiest memories
+            will always include you.
+          </p>
+
+        </div>
+
+      </div>
+
+      <!-- MEMORY VIDEO -->
+
+      <div class="timeline-item right">
+
+        <div class="timeline-content fade-in">
+
+          <video controls autoplay muted loop>
+            <source src="videos/memoryvideo3.mp4" type="video/mp4">
+          </video>
+
+          <h3>Moments I Never Want To Forget 🎥</h3>
+
+          <p>
+            Every smile, every laugh,
+          </p>
+
+        </div>
+
+      </div>
+
+      <div class="timeline-item left">
+
+        <div class="timeline-content fade-in">
+
+          <video controls autoplay muted loop>
+            <source src="videos/memoryvideo2.mp4" type="video/mp4">
+          </video>
+
+          <h3>Moments I Never Want To Forget 🎥</h3>
+
+          <p>
+            every little moment with you,
+          </p>
+
+        </div>
+
+      </div>
+
+      <div class="timeline-item right">
+
+        <div class="timeline-content fade-in">
+
+          <video controls autoplay muted loop>
+            <source src="videos/memoryvideo1.mp4" type="video/mp4">
+          </video>
+
+          <h3>Moments I Never Want To Forget 🎥</h3>
+
+          <p>
+            became part of my happiest memories.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- BUTTON -->
+
+    <div class="memory-button">
+
+      <a href="letter.html">
+        <button>Read My Letter ❤️</button>
+      </a>
+
+    </div>
+
+  </section>
+
+  <!-- FADE ANIMATION SCRIPT -->
+
+  <script>
+
+    const faders = document.querySelectorAll('.fade-in');
+
+    const appearOptions = {
+      threshold: 0.2
+    };
+
+    const appearOnScroll = new IntersectionObserver(function(
+      entries,
+      appearOnScroll
+    ){
+
+      entries.forEach(entry => {
+
+        if(!entry.isIntersecting){
+          return;
+        }
+
+        entry.target.classList.add('show');
+
+        appearOnScroll.unobserve(entry.target);
+
+      });
+
+    }, appearOptions);
+
+    faders.forEach(fader => {
+      appearOnScroll.observe(fader);
+    });
+
+  </script>
+
+<script src="music.js"></script>
+
+</body>
+
+</html>

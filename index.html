@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>FOR YOU MUMMY ❤️</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- MUSIC -->
+  <audio id="bgMusic" loop>
+    <source src="audio/ThousandYears.mpeg" type="audio/mpeg">
+  </audio>
+
+  <!-- FLOATING HEARTS -->
+  <div class="hearts">
+    <span>❤️</span>
+    <span>💖</span>
+    <span>💕</span>
+    <span>💗</span>
+    <span>💞</span>
+  </div>
+
+  <!-- HERO SECTION -->
+  <section class="hero">
+
+    <div class="overlay"></div>
+
+    <div class="hero-content">
+
+      <h1>To The Strongest Woman I Know ❤️</h1>
+
+      <p>
+        Some things are easier to code than to say...
+        so I made this for you ❤️
+      </p>
+
+      <a href="reasons.html">
+        <button>Start Reading</button>
+      </a>
+
+    </div>
+
+  </section>
+
+  <script src="music.js"></script>
+  
+  <script>
+    localStorage.removeItem("musicTime");
+    localStorage.removeItem("musicStarted");
+  </script>
+
+</body>
+
+</html>

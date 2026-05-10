@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Mother's Day ❤️</title>
+
+  <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body class="final-page">
+
+    <div class="final-overlay"></div>
+
+    <audio id="bgMusic" loop>
+        <source src="audio/ThousandYears.mpeg" type="audio/mpeg">
+      </audio>
+
+  <div class="final-container">
+
+    <h1 class="glow-text">Happy Mother's Day ❤️</h1>
+
+    <div class="final-image">
+      <!-- REPLACE THIS IMAGE -->
+      <img src="images/graduation.png" alt="Graduation">
+    </div>
+
+    <div class="final-message">
+      I worked hard for this moment…  
+      and I wish more than anything that you could be there with me.
+
+      <br><br>
+
+      My graduation will be from <b>26th to 28th September</b>.  
+      It would mean everything to me and I really want you to be there for me this time too.
+
+      <br><br>
+
+      I’m really sorry for the pain I’ve caused you.  
+      I never meant to hurt you.
+
+      <br><br>
+
+      Will you forgive me… and come to my graduation? ❤️
+    </div>
+
+    <div class="choices">
+      <button class="yes">💖 I'll be there</button>
+      <button class="no">🤍 I need time</button>
+    </div>
+
+    <div class="response" id="responseText"></div>
+
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+  
+      const yesBtn = document.querySelector(".yes");
+      const noBtn = document.querySelector(".no");
+      const response = document.getElementById("responseText");
+  
+      if (yesBtn && noBtn && response) {
+  
+        yesBtn.addEventListener("click", () => {
+          response.style.display = "block";
+          response.innerHTML = "Thank you, Mummy ❤️ This means everything to me.";
+  
+          setTimeout(() => {
+            response.style.opacity = "1";
+          }, 10);
+  
+          yesBtn.style.display = "none";
+          noBtn.style.display = "none";
+        });
+  
+        noBtn.addEventListener("click", () => {
+          response.style.display = "block";
+          response.innerHTML = "I understand... I will wait for you ❤️";
+  
+          setTimeout(() => {
+            response.style.opacity = "1";
+          }, 10);
+  
+          yesBtn.style.display = "none";
+          noBtn.style.display = "none";
+        });
+  
+      }
+  
+    });
+  </script>
+
+<script src="music.js"></script>
+
+</body>
+</html>

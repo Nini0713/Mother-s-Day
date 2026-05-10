@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>A Letter For You ❤️</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <!-- GOOGLE FONTS -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <audio id="bgMusic" loop>
+        <source src="audio/ThousandYears.mpeg" type="audio/mpeg">
+      </audio>
+
+  <!-- FLOATING HEARTS -->
+  <div class="hearts">
+    <span>❤️</span>
+    <span>💖</span>
+    <span>💕</span>
+    <span>💗</span>
+    <span>💞</span>
+  </div>
+
+  <!-- LETTER SECTION -->
+  <section class="letter-page">
+
+    <div class="letter-overlay"></div>
+
+    <div class="letter-container">
+
+      <h1>To My Dearest Mummy ❤️</h1>
+
+      <div class="typing-text"></div>
+
+      <!-- NEXT BUTTON -->
+      <div class="next-button">
+        <a href="final.html">
+          <button>One Last Thing ❤️</button>
+        </a>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- TYPING SCRIPT -->
+  <script>
+
+    const text = `I know I have hurt you so much.
+
+I know there were moments when I said things
+out of pain, anger, or frustration.
+
+But behind every argument,
+there was still love.
+There will always be love.
+
+No matter how much I grow,
+a part of me will always remain
+the little girl who needed her mother.
+
+Thank you for every sacrifice you made quietly.
+
+Thank you for loving me even during my difficult moments.
+
+Thank you for being strong for all of us.
+
+I may not always express it properly,
+but I appreciate you more than words can explain.
+
+I am still learning.
+Still growing.
+Still trying to become someone
+you can always be proud of.
+
+And no matter where life takes me,
+I never want to lose you ❤️
+
+I love you forever, Mummy❤️.
+
+Sincerely Your,
+Kutty Nai ❤️`;
+
+    let index = 0;
+
+    function typeLetter(){
+
+      if(index < text.length){
+
+        document.querySelector(".typing-text").innerHTML += text.charAt(index);
+
+        index++;
+
+        let speed = 40;
+
+        // slower pauses for emotion
+        if(text.charAt(index) === ".") speed = 300;
+        if(text.charAt(index) === ",") speed = 150;
+        if(text.charAt(index) === "\n") speed = 200;
+
+        setTimeout(typeLetter, speed);
+      }
+
+    }
+
+    window.onload = typeLetter;
+
+  </script>
+
+<script src="music.js"></script>
+
+</body>
+
+</html>
